@@ -27,9 +27,9 @@ $params         = "";
                 }
         }
 
-echo "\n";
+echo "<br>";
 echo "controlador: " . $controller;
 echo "<br>";
 echo "metodo:" . $method;
-echo "\n";
+echo "<br>";
 echo "parametros: " . $params;
