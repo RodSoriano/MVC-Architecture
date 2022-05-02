@@ -7,7 +7,7 @@ class Home #extends Controllers
                 #parent::__construct();
             }
 
-        public function home($parems)
+        public function home($params)
             {
                 echo "mensaje desde controlador";
             }
@@ -16,6 +16,4 @@ class Home #extends Controllers
             {
                 echo "dato recibido: " . $params;
             }
-
-        
     }
