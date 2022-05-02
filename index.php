@@ -28,12 +28,13 @@ $params         = "";
                     $params = trim($params, ',');
                 }
         }
-
+        
 spl_autoload_register(function($class)
     {
-        if(file_exists(LIBS . 'Core/' . $class . ".php"))
+        //echo "spl autoload";
+        if(file_exists(LIBS . "Core/" . $class . ".php"))
             {
-                require_once (LIBS . 'Core/' . $class . ".php");
+                require_once (LIBS . "Core/" . $class . ".php");
             }
     });
 
@@ -43,6 +44,7 @@ $controllerFile = "Controllers/" . $controller . ".php";
 
     if(file_exists($controllerFile))
         {
+            //echo "valid";
             require_once ($controllerFile);
             $controller = new $controller();
 
@@ -75,11 +77,9 @@ $controllerFile = "Controllers/" . $controller . ".php";
 
 
 
-
-
-// echo "<br>";
-// echo "controlador: " . $controller;
-// echo "<br>";
-// echo "metodo:" . $method;
-// echo "<br>";
-// echo "parametros: " . $params;
+echo "<br>";
+echo "controlador: " . $controller;
+echo "<br>";
+echo "metodo:" . $method;
+echo "<br>";
+echo "parametros: " . $params;
