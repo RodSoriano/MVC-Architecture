@@ -10,11 +10,11 @@ class Controllers
         public function loadModel()
             {
                 $model      = get_class($this) ."Model";
-                $routClass  = "Models/" . $model . ".php";
+                $routeClass  = "Models/" . $model . ".php";
 
-                if(file_exists($routClass))
+                if(file_exists($routeClass))
                     {
-                        require_once($routClass);
+                        require_once($routeClass);
                         $this->model = new $model();
                     }
             }
