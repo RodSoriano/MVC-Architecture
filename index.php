@@ -28,56 +28,8 @@ $params         = "";
                     $params = trim($params, ',');
                 }
         }
-        
-spl_autoload_register(function($class)
-    {
-        if(file_exists(LIBS . "Core/" . $class . ".php"))
-            {
-                require_once (LIBS . "Core/" . $class . ".php");
-            }
-    });
 
-//load
+require_once("Libraries/Core/Autoload.php");
+require_once("Libraries/Core/Load.php");
 
-$controllerFile = "Controllers/" . $controller . ".php";
-
-    if(file_exists($controllerFile))
-        {
-            require_once ($controllerFile);
-            $controller = new $controller();
-
-                if(method_exists($controller , $method))
-                    {
-                        $controller->{$method}($params);
-                    }
-                else
-                    {
-                        echo "No existe el metodo";
-                    }
-        }
-    else
-        {
-            echo "No existe controlador.";
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// echo "<br>";
-// echo "controlador: " . $controller;
-// echo "<br>";
-// echo "metodo:" . $method;
-// echo "<br>";
-// echo "parametros: " . $params;
+#Left php tags open to prevent (XSS) injections through HTML in the future.
