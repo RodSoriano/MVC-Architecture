@@ -4,12 +4,17 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Online Store</title>
+    <title> <?php echo $data['tag_page']; ?> </title>
 
 </head>
 
 <body>
-    <h1>Welcome to the site!</h1>
+    <section id="<?php echo $data['page_id']; ?>">
+        <h1> <?php echo $data['page_title']; ?> </h1>
+
+        <p> <?php echo $data['page_content']; ?> </p>
+
+    </section>
 </body>
 
 </html>
