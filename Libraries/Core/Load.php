@@ -20,4 +20,3 @@ $controllerFile = "Controllers/" . $controller . ".php";
         {
             require_once("Controllers/Errors.php");
         }
-?>
