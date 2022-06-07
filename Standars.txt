@@ -1,0 +1,27 @@
+###Home.php####
+
+algunas clases que tendre que cambiar en refactorizacion en el futuro
+
+insertar()
+verUsuario()
+actualizar()
+verUsuariios()
+eliminarUsuario()
+
+###Conexion.php###
+
+clase Conexion que se extiende a Mysql.php
+
+###base de datos###
+
+se llama tienda, hay que cambiar
+tabla =
+    /usuario
+
+todas las querys estan en homeModel
+
+###HomeModel.php###
+
+variables
+nombre/
+edad/

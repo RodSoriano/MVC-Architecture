@@ -1,6 +1,6 @@
 <?php
 
-require_once("Config/config.php");
+require_once("Config/Config.php");
 
 $url            = !empty($_GET['url']) ? $_GET['url'] : 'Home/home';
 $arrUrl         = explode('/' , $url);
